@@ -1,0 +1,10 @@
+{
+  "imports" : [ "typography", "color", "spacing", "badge", "utility" ],
+  "assets" : {
+    "@fontsource/fira-sans" : {
+      "*.css" : "@fontsource/fira-sans",
+      "files/*" : "@fontsource/fira-sans/files"
+    }
+  },
+  "version": 3
+}

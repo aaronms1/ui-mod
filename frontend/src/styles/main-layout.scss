@@ -1,0 +1,58 @@
+/* main-layout.scss */
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.layout-body {
+  display: flex;
+  flex: 1;
+  position: relative; // Ensures position context for floating elements
+}
+
+/* Styling for elements with slot="header" */
+[slot~='header'] {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Left Side Navigation Styling */
+[slot~='side-nav'].side-nav-left {
+  flex: 0 0 300px; // Fix width for left sidebar
+  max-width: 300px;
+  overflow-y: auto;
+  border-right: 1px solid var(--shade-10pct);
+  background-color: var(--primary-color);
+}
+
+/* Right Side Navigation Styling */
+[slot~='side-nav'].side-nav-right {
+  flex: 0 0 300px; // Fix width for right sidebar
+  max-width: 300px;
+  overflow-y: auto;
+  border-left: 1px solid var(--shade-10pct);
+  background-color: var(--primary-color);
+}
+
+/* Main Content */
+[slot~='content-container'] {
+  flex: 1; // Allow the content area to grow and fill remaining space
+  overflow-y: auto;
+  padding: 1rem;
+  background-color: var(--base-color);
+}
+
+.header,
+.footer {
+  flex: 0 0 auto; // Prevent shrinking/growing
+  background-color: var(--primary-color);
+}
+
+[slot~='footer'] {
+  text-align: center;
+  padding: 1rem 0;
+}

@@ -1,0 +1,40 @@
+.model-settings-view {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-m);
+  background-color: var(--shade-5pct);
+  border: 1px solid var(--shade-20pct);
+  border-radius: var(--border-radius-m);
+
+  .model-actions {
+    display: flex;
+    gap: var(--space-m);
+    margin-bottom: var(--space-m);
+
+    button {
+      padding: var(--space-s) var(--space-m);
+      border-radius: var(--border-radius-s);
+      cursor: pointer;
+      transition: background-color 0.3s;
+
+      &.settings {
+        background-color: var(--primary-color);
+        color: var(--primary-text-color);
+
+        &:hover {
+          background-color: var(--primary-color-50pct);
+        }
+      }
+    }
+  }
+
+  .model-input {
+    margin-bottom: var(--space-m);
+
+    input {
+      padding: var(--space-s);
+      border: 1px solid var(--shade-20pct);
+      border-radius: var(--border-radius-s);
+    }
+  }
+}

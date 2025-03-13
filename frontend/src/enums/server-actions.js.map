@@ -1,0 +1,1 @@
+{"version":3,"file":"server-actions.js","sourceRoot":"","sources":["server-actions.tsx"],"names":[],"mappings":"AAAA,MAAM,CAAN,IAAY,aAKX;AALD,WAAY,aAAa;IACvB,mDAAK,CAAA;IACL,iDAAI,CAAA;IACJ,uDAAO,CAAA;IACP,iDAAI,CAAA;AACN,CAAC,EALW,aAAa,KAAb,aAAa,QAKxB","sourcesContent":["export enum ServerActions {\n  START,\n  STOP,\n  RESTART,\n  PING\n}\n"]}

@@ -1,0 +1,47 @@
+@import '../variables';
+@import '../mixins';
+
+.side-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  transition: transform var(--animation-duration) var(--ease-in-out);
+
+  &.side-nav-left {
+    @include side-nav(left); // Use the mixin for left side navigation
+  }
+
+  &.side-nav-right {
+    @include side-nav(right); // Use the mixin for right side navigation
+  }
+
+  &.active {
+    // Apply active state with slider behavior for the current position
+    @include slider-active(left); // Handles left active state
+  }
+
+  &.active.side-nav-right {
+    @include slider-active(right); // Handles right active state
+  }
+
+  .side-nav-list {
+    list-style: none;
+    padding: var(--space-l);
+    margin: 0;
+
+    .side-nav-item {
+      margin: var(--space-s) 0;
+
+      a {
+        text-decoration: none;
+        color: var(--primary-text-color);
+        font-size: var(--font-size-m);
+
+        &:hover {
+          text-decoration: underline;
+          color: var(--primary-color);
+        }
+      }
+    }
+  }
+}

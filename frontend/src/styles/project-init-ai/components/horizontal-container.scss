@@ -1,0 +1,7 @@
+.horizontal-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* Center items vertically in the row */
+  justify-content: flex-start; /* Align items to the left by default */
+  gap: 1rem; /* Add space between children (optional) */
+}

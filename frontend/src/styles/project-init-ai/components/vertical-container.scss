@@ -1,0 +1,7 @@
+.vertical-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Default aligns children to stretch */
+  justify-content: flex-start; /* Stack from the top */
+  gap: 1rem; /* Add space between children (optional) */
+}

@@ -1,0 +1,23 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // Default for 3 columns
+  gap: var(--space-m);
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); // 2 columns for smaller screens
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; // 1 column for very small screens
+  }
+}
+
+.grid-column {
+  background-color: var(--primary-background, var(--shade-5pct)); // Optional: Default background support
+  color: var(--primary-text, var(--primary-text-color)); // Optional: Dynamic text color support
+  border-radius: var(--border-radius-s);
+}
+
+.grid-row {
+  display: contents;
+}

@@ -1,0 +1,80 @@
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius-m);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+
+  &.primary {
+    background-color: var(--shade);
+    color: var(--primary-text-color);
+
+    &:hover {
+      background-color: var(--success-color);
+    }
+  }
+
+  &.secondary {
+    background-color: var(--shade-50pct);
+    color: var(--primary-text-color);
+
+    &:hover {
+      background-color: var(--shade-70pct);
+    }
+  }
+
+  &.danger {
+    background-color: var(--error-color);
+    color: var(--primary-text-color);
+
+    &:hover {
+      background-color: var(--error-color-50pct);
+    }
+  }
+
+  // Sizes
+  &.small {
+    font-size: var(--font-size-xs);
+    padding: var(--space-xs) var(--space-s);
+  }
+
+  &.medium {
+    font-size: var(--font-size-m);
+    padding: var(--space-s) var(--space-m);
+  }
+
+  &.large {
+    font-size: var(--font-size-l);
+    padding: var(--space-m) var(--space-l);
+  }
+
+  &.xlarge {
+    font-size: var(--font-size-xxl);
+    padding: var(--space-l) var(--space-xl);
+  }
+
+  &.xxlarge {
+    font-size: var(--font-size-xxxl);
+    padding: var(--space-xl) var(--size-xl);
+  }
+
+  .close-button {
+    position: absolute;
+    top: var(--space-xs);
+    right: var(--space-xs);
+    background: none;
+    border: none;
+    font-size: var(--font-size);
+    cursor: pointer;
+    color: inherit;
+
+    &:hover {
+      color: var(--error-color);
+    }
+  }
+}

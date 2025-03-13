@@ -1,0 +1,81 @@
+@import 'variables';
+
+@mixin slide-from($direction, $distance: 100%) {
+  position: fixed;
+  transition: transform var(--animation-duration) var(--ease-in-out);
+
+  @if $direction == 'top' {
+    transform: translateY(-#{$distance});
+    top: 0;
+    left: 0;
+    right: 0;
+  } @else if $direction == 'bottom' {
+    transform: translateY(#{$distance});
+    bottom: 0;
+    left: 0;
+    right: 0;
+  } @else if $direction == 'left' {
+    transform: translateX(-#{$distance});
+    top: 0;
+    bottom: 0;
+    left: 0;
+  } @else if $direction == 'right' {
+    transform: translateX(#{$distance});
+    top: 0;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+@mixin slider-active($direction) {
+  @if $direction == 'top' {
+    transform: translateY(0);
+  } @else if $direction == 'bottom' {
+    transform: translateY(0);
+  } @else if $direction == 'left' {
+    transform: translateX(0);
+  } @else if $direction == 'right' {
+    transform: translateX(0);
+  }
+}
+
+@mixin side-nav($position, $width: var(--size-l)) {
+  @include slide-from($position, $width);
+  width: #{$width};
+  height: 100vh;
+
+  // Use colors and shadow from styles.scss
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px var(--shade-30pct);
+
+  z-index: 1000; // Ensure it is above most elements
+  border-radius: var(--border-radius-m);
+}
+
+@mixin shadow($level: 10pct) {
+  box-shadow: 0 4px 6px var(--shade-#{$level});
+}
+
+@mixin transitioning {
+  transition: all var(--animation-duration) var(--ease-in-out);
+}
+
+@mixin button($bg-color: var(--primary-color), $text-color: var(--primary-text-color)) {
+  background-color: #{$bg-color};
+  color: #{$text-color};
+  border-radius: var(--border-radius-m);
+  padding: var(--space-m) var(--space-l);
+  box-shadow: 0 2px 4px var(--shade-20pct);
+  cursor: pointer;
+  font-size: var(--font-size-m);
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: var(--primary-color-50pct);
+    box-shadow: 0 2px 8px var(--shade-50pct);
+  }
+
+  &:active {
+    background-color: var(--primary-color-10pct);
+  }
+}

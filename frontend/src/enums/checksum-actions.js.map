@@ -1,0 +1,1 @@
+{"version":3,"file":"checksum-actions.js","sourceRoot":"","sources":["checksum-actions.tsx"],"names":[],"mappings":"AAAA;;GAEG;AACH,MAAM,CAAN,IAAY,eAGX;AAHD,WAAY,eAAe;IACzB,yDAAM,CAAA;IACN,yDAAM,CAAA;AACR,CAAC,EAHW,eAAe,KAAf,eAAe,QAG1B","sourcesContent":["/**\n * <h1>{@link ChecksumActions}</h1>\n */\nexport enum ChecksumActions {\n  SHA256,\n  SHA512\n}\n"]}

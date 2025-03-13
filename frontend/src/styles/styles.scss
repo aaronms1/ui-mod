@@ -1,0 +1,95 @@
+@import url('main-layout.scss');
+@import url('project-init-ai/pages/chat-client.scss');
+@import url('project-init-ai/pages/content-gallery.scss');
+@import url('project-init-ai/pages/grid.scss');
+@import url('project-init-ai/pages/model-destroy.scss');
+@import url('project-init-ai/pages/model-merge.scss');
+@import url('project-init-ai/pages/model-settings.scss');
+@import url('project-init-ai/pages/search-models.scss');
+@import url('project-init-ai/pages/servers.scss');
+@import url('project-init-ai/pages/snapshots.scss');
+@import url('project-init-ai/pages/system-settings.scss');
+
+html {
+  --font-size-xxs: 0.6875rem;
+  --font-size-xxxl: 1.75rem;
+  --size-xxs: 1.25rem;
+  --size-xxxl: 3.5rem;
+  --font-size: 1rem;
+  --font-size-xxl: 1.375rem;
+  --font-size-xl: 1.125rem;
+  --font-size-l: 1rem;
+  --font-size-m: 0.875rem;
+  --font-size-s: 0.8125rem;
+  --font-size-xs: 0.75rem;
+  --border-radius-s: calc(var(-size-m) / 6);
+  --border-radius-m: calc(var(-size-m) / 2);
+  --border-radius-l: var(-size-m);
+  --space-xl: 1.875rem;
+  --space-l: 1.25rem;
+  --space-m: 0.625rem;
+  --space-s: 0.3125rem;
+  --space-xs: 0.1875rem;
+  --size-xl: 3rem;
+  --size-l: 2.5rem;
+  --size-m: 2rem;
+  --size-s: 1.75rem;
+  --size-xs: 1.5rem;
+}
+
+[theme~="dark"] {
+  --primary-text-color: hsla(191, 98%, 50%, 0.98);
+  --body-text-color: hsla(191, 95%, 29%, 0.98);
+  --success-color: hsla(271, 95%, 24%, 1);
+  --success-color-50pct: hsla(271, 95%, 24%, 0.5);
+  --success-color-10pct: hsla(271, 95%, 24%, 0.1);
+  --error-text-color: hsl(89, 89%, 30%);
+  --error-color: hsl(89, 89%, 30%);
+  --error-color-50pct: hsla(89, 89%, 30%, 0.5);
+  --error-color-10pct: hsla(89, 89%, 30%, 0.1);
+  --success-text-color: hsla(271, 95%, 24%, 1);
+  --base-color: hsl(214, 30%, 10%);
+  --primary-color: hsla(214, 43%, 12%, 1);
+  --primary-color-50pct: hsla(214, 43%, 12%, 0.5);
+  --primary-color-10pct: hsla(214, 43%, 12%, 0.1);
+  --shade: hsla(238, 95%, 49%, 0.38);
+  --shade-5pct: hsla(238, 95%, 49%, 0.05);
+  --shade-10pct: hsla(238, 95%, 49%, 0.1);
+  --shade-20pct: hsla(238, 95%, 49%, 0.2);
+  --shade-30pct: hsla(238, 95%, 49%, 0.3);
+  --shade-40pct: hsla(238, 95%, 49%, 0.4);
+  --shade-50pct: hsla(238, 95%, 49%, 0.5);
+  --shade-60pct: hsla(238, 95%, 49%, 0.6);
+  --shade-70pct: hsla(238, 95%, 49%, 0.7);
+  --shade-80pct: hsla(238, 95%, 49%, 0.8);
+  --shade-90pct: hsla(238, 95%, 49%, 0.9);
+
+}
+
+[theme~="orange"] {
+  --primary-color-50pct: rgba(235, 89, 5, 0.5);
+  --primary-color-10pct: rgba(235, 89, 5, 0.1);
+  --error-color-50pct: rgba(231, 24, 24, 0.5);
+  --error-color-10pct: rgba(231, 24, 24, 0.1);
+  --success-color-50pct: rgba(62, 229, 170, 0.5);
+  --success-color-10pct: rgba(62, 229, 170, 0.1);
+  --shade: hsl(0, 0%, 13%);
+  --primary-color: hsl(22, 96%, 47%);
+  --primary-text-color: hsl(22, 100%, 42%);
+  --error-color: hsl(0, 81%, 50%);
+  --error-text-color: hsl(0, 86%, 45%);
+  --success-color: hsl(159, 76%, 57%);
+  --success-contrast-color: hsl(159, 29%, 10%);
+  --success-text-color: hsl(159, 61%, 40%);
+  --shade-5pct: rgba(33, 33, 33, 0.05);
+  --shade-10pct: rgba(33, 33, 33, 0.1);
+  --shade-20pct: rgba(33, 33, 33, 0.2);
+  --shade-30pct: rgba(33, 33, 33, 0.3);
+  --shade-40pct: rgba(33, 33, 33, 0.4);
+  --shade-50pct: rgba(33, 33, 33, 0.5);
+  --shade-60pct: rgba(33, 33, 33, 0.6);
+  --shade-70pct: rgba(33, 33, 33, 0.7);
+  --shade-80pct: rgba(33, 33, 33, 0.8);
+  --shade-90pct: rgba(33, 33, 33, 0.9);
+
+}

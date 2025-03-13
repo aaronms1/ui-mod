@@ -1,0 +1,61 @@
+// Root styles for the model search view
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); // Default is 3 columns
+  gap: var(--space-m); // Handles spacing between grid items
+  padding: var(--space-m);
+  background-color: var(--shade-5pct); // Light background for the grid container
+  border: 1px solid var(--shade-20pct); // Border around the grid container
+  border-radius: var(--border-radius-m);
+}
+
+// Styles for individual grid rows (models)
+.model-row {
+  display: contents; // Allow grid cells to span rows or columns
+  align-items: center;
+}
+
+// General styles for grid cells
+.grid-cell {
+  padding: var(--space-s);
+  text-align: center;
+}
+
+// Styles for bordered cells specifically
+.bordered-cell {
+  grid-column: span 1;
+  border: 1px solid var(--shade-20pct);
+  border-radius: var(--border-radius-s);
+  background-color: var(--shade-5pct); // Add background for better visual distinction
+}
+
+// Button styles inside the grid
+.grid-cell button {
+  background-color: var(--primary-color); // Primary color for buttons
+  color: var(--primary-text-color); // White text
+  border: none;
+  border-radius: var(--border-radius-s);
+  padding: var(--space-s) var(--space-m);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--primary-color-50pct); // Darker shade on hover
+  }
+
+  &:focus {
+    outline: 2px solid var(--primary-color-50pct);
+  }
+}
+
+// Additional styles for mobile responsiveness
+@media (max-width: 768px) {
+  .models-grid {
+    grid-template-columns: 1fr; // Stack items on smaller screens
+  }
+
+  .grid-cell,
+  .bordered-cell {
+    text-align: left; // Adjust alignment for narrow screens
+    padding: var(--space-s);
+  }
+}
