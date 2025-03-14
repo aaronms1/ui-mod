@@ -1,14 +1,14 @@
 @import url('main-layout.scss');
-@import url('project-init-ai/pages/chat-client.scss');
-@import url('project-init-ai/pages/content-gallery.scss');
-@import url('project-init-ai/pages/grid.scss');
-@import url('project-init-ai/pages/model-destroy.scss');
-@import url('project-init-ai/pages/model-merge.scss');
-@import url('project-init-ai/pages/model-settings.scss');
-@import url('project-init-ai/pages/search-models.scss');
-@import url('project-init-ai/pages/servers.scss');
-@import url('project-init-ai/pages/snapshots.scss');
-@import url('project-init-ai/pages/system-settings.scss');
+@import url('pages/chat-client.scss');
+@import url('pages/content-gallery.scss');
+@import url('pages/grid.scss');
+@import url('pages/model-destroy.scss');
+@import url('pages/model-merge.scss');
+@import url('pages/model-settings.scss');
+@import url('pages/search-models.scss');
+@import url('pages/servers.scss');
+@import url('pages/snapshots.scss');
+@import url('pages/system-settings.scss');
 
 html {
   --font-size-xxs: 0.6875rem;

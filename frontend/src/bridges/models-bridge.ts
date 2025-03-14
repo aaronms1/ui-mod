@@ -1,7 +1,7 @@
 import { from, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import client from './connection-factory';
-import { ModelActions } from '../enums/model-actions';
+import { ModelActions } from '../enums/model-actions.ts';
 
 /**
  * <h1>{@link ModelsBridge}</h1>

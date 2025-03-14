@@ -1,5 +1,5 @@
 import React, { JSX } from 'react';
-import './Header.scss';
+// import './Header.scss';
 import HorizontalContainer from './horizontal-container';
 
 interface HeaderProps {

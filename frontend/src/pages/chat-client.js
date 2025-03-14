@@ -1,6 +1,6 @@
 import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useState } from 'react';
-import { MessageActions } from '../enums/message-actions';
+import { MessageActions } from '../enums/message-actions.js';
 import InputArea from '../components/input-area'; // Handles AI responses in a text field
 import MessageInputBar from '../components/message-input-bar'; // Input bar for user messages
 import client from '../bridges/connection-factory'; // Import RSocket client

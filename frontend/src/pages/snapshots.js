@@ -2,7 +2,7 @@ import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-run
 import { useState } from 'react';
 import { NotificationService } from '../components/notifications';
 import { SnapshotsBridge } from '../bridges/snap-shots-bridge';
-import { SnapshotsActions } from '../enums/snapshots-actions';
+import { SnapshotsActions } from '../enums/snapshots-actions.js';
 import { from } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import Button from '../components/button';

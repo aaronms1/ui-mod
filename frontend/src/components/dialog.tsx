@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Draggable from 'react-draggable';
 import { ResizableBox } from 'react-resizable';
-import './Dialog.scss';
+// import '../styles/components/dialog.css';
 import Button from './button';
 
 interface DialogProps {
@@ -9,12 +9,11 @@ interface DialogProps {
   message: string,
   onClose: () => void,
   children?: React.ReactNode,
-  opened?: boolean,
   onOpenedChanged?: (e: CustomChangeEvent) => void
 }
 
 interface CustomChangeEvent {
-  target: { value: boolean | undefined };
+  target: { value: boolean };
   nativeEvent: Event;
   currentTarget: HTMLInputElement;
   bubbles: boolean;
@@ -31,18 +30,26 @@ interface CustomChangeEvent {
   persist: () => void;
 }
 
+/**
+ * <h1>{@link Dialog}</h1> is a functional React component representing a dialog box.
+ * @param isOpen - boolean value to determine if the dialog is open
+ * @param message - message to display in the dialog
+ * @param onClose - function to close the dialog
+ * @param children - optional children to render in the dialog
+ * @param onOpenedChanged - function to handle changes to the opened state
+ * @constructor
+ */
 const Dialog: React.FC<DialogProps> = ({
   isOpen,
   message,
   onClose,
   children,
-  opened,
   onOpenedChanged
 }) => {
   useEffect(() => {
     if (onOpenedChanged) {
       const event: CustomChangeEvent = {
-        target: { value: opened },
+        target: { value: isOpen },
         nativeEvent: {} as Event,
         currentTarget: {} as HTMLInputElement,
         bubbles: false,
@@ -60,7 +67,7 @@ const Dialog: React.FC<DialogProps> = ({
       };
       onOpenedChanged(event);
     }
-  }, [opened, onOpenedChanged]);
+  }, [isOpen, onOpenedChanged]);
 
   if (!isOpen) return null;
 
@@ -79,8 +86,4 @@ const Dialog: React.FC<DialogProps> = ({
   );
 };
 
-/**
- * <h1>{@link Dialog}</h1>
- * dialog component.
- */
 export default Dialog;

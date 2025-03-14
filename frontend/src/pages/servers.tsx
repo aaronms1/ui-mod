@@ -3,8 +3,8 @@ import { NotificationService } from '../components/notifications';
 import Button from '../components/button';
 import Dialog from '../components/dialog';
 import { ServersBridge } from '../bridges/servers-bridge';
-import { ServerActions } from '../enums/server-actions';
-import { ServerTypes } from '../enums/server-types';
+import { ServerActions } from '../enums/server-actions.ts';
+import { ServerTypes } from '../enums/server-types.ts';
 import { firstValueFrom } from 'rxjs';
 
 const ManageServersView: React.FC = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import './VerticalContainer.scss';
+// import './VerticalContainer.scss';
 
 interface VerticalContainerProps {
     className?: string;

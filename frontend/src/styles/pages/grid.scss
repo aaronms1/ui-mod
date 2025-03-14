@@ -1,0 +1,69 @@
+// Variables
+$primary-background: var(--primary-background, var(--shade-5pct));
+$primary-text: var(--primary-text, var(--primary-text-color));
+$border-radius: var(--border-radius-s);
+$border-color: #ccc;
+$space-m: var(--space-m);
+$font-weight-bold: bold;
+$padding: 0.5rem;
+$alternate-row-background: var(--alternate-row-background, var(--shade-10pct));
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin grid-layout($columns, $gap) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+}
+
+// Styles
+.grid {
+  @include grid-layout(3, $space-m);
+
+  &-column-header {
+    font-weight: $font-weight-bold;
+    text-align: center;
+    padding: $padding;
+    border-bottom: 2px solid $border-color;
+  }
+
+  &-row {
+    display: contents; // Allows the row to adopt the grid layout of the parent
+
+    &:nth-child(odd) {
+      background-color: $alternate-row-background;
+    }
+  }
+
+  &-column {
+    background-color: $primary-background;
+    color: $primary-text;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    padding: $padding;
+    text-align: center; // Center alignment
+  }
+}
+
+.bottom-element {
+  height: 1px;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .grid {
+    @include grid-layout(2, $space-m);
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    @include grid-layout(1, $space-m);
+  }
+}
+//todo: make sure the grid size dynamically respects all main components via the main _mixins file

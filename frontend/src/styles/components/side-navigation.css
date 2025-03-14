@@ -1,0 +1,59 @@
+.side-nav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  transition: transform var(--animation-duration) var(--ease-in-out);
+}
+.side-nav.side-nav-left {
+  position: fixed;
+  transition: transform var(--animation-duration) var(--ease-in-out);
+  transform: translateX(-var(--size-l));
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: var(--size-l);
+  height: 100vh;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px var(--shade-30pct);
+  z-index: 1000;
+  border-radius: var(--border-radius-m);
+}
+.side-nav.side-nav-right {
+  position: fixed;
+  transition: transform var(--animation-duration) var(--ease-in-out);
+  transform: translateX(var(--size-l));
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: var(--size-l);
+  height: 100vh;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 6px var(--shade-30pct);
+  z-index: 1000;
+  border-radius: var(--border-radius-m);
+}
+.side-nav.active {
+  transform: translateX(0);
+}
+.side-nav.active.side-nav-right {
+  transform: translateX(0);
+}
+.side-nav .side-nav-list {
+  list-style: none;
+  padding: var(--space-l);
+  margin: 0;
+}
+.side-nav .side-nav-list .side-nav-item {
+  margin: var(--space-s) 0;
+}
+.side-nav .side-nav-list .side-nav-item a {
+  text-decoration: none;
+  color: var(--primary-text-color);
+  font-size: var(--font-size-m);
+}
+.side-nav .side-nav-list .side-nav-item a:hover {
+  text-decoration: underline;
+  color: var(--primary-color);
+}
+
+/*# sourceMappingURL=side-navigation.css.map */

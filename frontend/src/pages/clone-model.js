@@ -1,9 +1,9 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState } from 'react';
 import { NotificationService as Notification } from '../components/notifications';
-import { Button, Dialog, InputArea } from '../components/@index';
+import { Button, Dialog, InputArea } from '../components/@index.js';
 import { ModelsBridge } from '../bridges/models-bridge';
-import { ModelActions } from '../enums/model-actions';
+import { ModelActions } from '../enums/model-actions.js';
 const CloneModelView = () => {
     const [sourcePath, setSourcePath] = useState('');
     const [dialogOpened, setDialogOpened] = useState(false);

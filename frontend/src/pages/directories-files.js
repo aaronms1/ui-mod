@@ -1,8 +1,8 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState } from 'react';
 import { NotificationService as Notification } from '../components/notifications';
-import { DirectoriesFilesBridge } from '../bridges/directories-files';
-import { DirectoryActions } from '../enums/directory-actions';
+import { DirectoriesFilesBridge } from '../bridges/directories-files-bridge.js';
+import { DirectoryActions } from '../enums/directory-actions.js';
 import InputArea from '../components/input-area';
 import Button from '../components/button';
 import Dialog from '../components/dialog';
@@ -41,4 +41,4 @@ const DirFileView = () => {
  * <h1>{@link DirFileView}</h1>
  */
 export default DirFileView;
-//# sourceMappingURL=directories-files.js.map
+//# sourceMappingURL=directories-files-bridge.js.map

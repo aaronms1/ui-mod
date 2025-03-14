@@ -1,7 +1,7 @@
 import { from, Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import client from "./connection-factory";
-import { ChecksumActions } from '../enums/checksum-actions';
+import { ChecksumActions } from '../enums/checksum-actions.ts';
 
 /**
  * <h1>{@link ChecksumsBridge}</h1>

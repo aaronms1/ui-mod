@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent } from 'react';
-import './InputArea.scss';
+// import './InputArea.scss';
 
 export interface TextFieldValueChangedEvent {
   target: { value: string | number };

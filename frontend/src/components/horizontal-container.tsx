@@ -1,5 +1,5 @@
 import React from 'react';
-import './HorizontalContainer.scss';
+// import './HorizontalContainer.scss';
 
 interface HorizontalContainerProps {
     className?: string;

@@ -4,8 +4,8 @@ import { NotificationService } from '../components/notifications';
 import Button from '../components/button';
 import Dialog from '../components/dialog';
 import { ServersBridge } from '../bridges/servers-bridge';
-import { ServerActions } from '../enums/server-actions';
-import { ServerTypes } from '../enums/server-types';
+import { ServerActions } from '../enums/server-actions.js';
+import { ServerTypes } from '../enums/server-types.js';
 import { firstValueFrom } from 'rxjs';
 const ManageServersView = () => {
     const [dialogOpened, setDialogOpened] = useState(false);

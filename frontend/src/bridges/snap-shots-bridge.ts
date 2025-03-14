@@ -1,7 +1,7 @@
 import { from, Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import client from "./connection-factory";
-import { SnapshotsActions } from '../enums/snapshots-actions';
+import { SnapshotsActions } from '../enums/snapshots-actions.ts';
 
 /**
  * <h1>{@link SnapshotsBridge}</h1>

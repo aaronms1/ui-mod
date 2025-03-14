@@ -2,7 +2,7 @@ import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-run
 import { useState } from 'react';
 import Button from '../components/button';
 import { ModelsBridge } from '../bridges/models-bridge';
-import { ModelActions } from '../enums/model-actions';
+import { ModelActions } from '../enums/model-actions.js';
 import { firstValueFrom } from 'rxjs';
 import { NotificationService } from '../components/notifications';
 import InputArea from '../components/input-area';

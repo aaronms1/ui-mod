@@ -5,7 +5,7 @@ import Dialog from '../components/dialog';
 import { NotificationService } from '../components/notifications';
 import InputArea from '../components/input-area';
 import { ModelsBridge } from '../bridges/models-bridge';
-import { ModelActions } from '../enums/model-actions';
+import { ModelActions } from '../enums/model-actions.js';
 import { firstValueFrom } from 'rxjs';
 const MergeModelView = () => {
     const [modelPath1, setModelPath1] = useState('');

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { MessageActions } from '../enums/message-actions';
+import { MessageActions } from '../enums/message-actions.ts';
 import { Subscription } from 'rxjs';
 import InputArea from '../components/input-area'; // Handles AI responses in a text field
 import MessageInputBar from '../components/message-input-bar'; // Input bar for user messages
-import client from '../bridges/connection-factory'; // Import RSocket client
+import client from '../bridges/connection-factory'; // Import HTTP client
 
 interface MessageSet {
   userMessage: {
@@ -41,7 +41,7 @@ function MessageList(props: {
 const ChatClientView: React.FC = () => {
   const [messageSets, setMessageSets] = useState<MessageSet[]>([]);
   const [loading, setLoading] = useState(false);
-  let subscription: Subscription;
+  const [subscription, setSubscription] = useState<Subscription | null>(null);
 
   const handleSendMessage = (userMessage: string) => {
     const userMessageData = {
@@ -58,18 +58,20 @@ const ChatClientView: React.FC = () => {
     ]);
 
     setLoading(true);
-    subscription = client
-      .rsocketCall('user.request', { text: userMessage })
+    const sub = client
+      .call('MessageBridge', 'processMessages', { text: userMessage })
       .subscribe({
         next: (aiResponse) => {
           handleReceiveResponse(aiResponse, userMessageData);
           setLoading(false);
         },
         error: (error) => {
-          console.error('RSocket error:', error);
+          console.error('HTTP error:', error);
           setLoading(false);
         },
       });
+
+    setSubscription(sub);
   };
 
   const handleReceiveResponse = (aiResponse: any, userMessageData: any) => {
@@ -98,6 +100,14 @@ const ChatClientView: React.FC = () => {
   const handleIconClick = (index: number, action: MessageActions) => {
     console.log(`Icon clicked at index ${index} with action ${action}`);
   };
+
+  useEffect(() => {
+    return () => {
+      if (subscription) {
+        subscription.unsubscribe();
+      }
+    };
+  }, [subscription]);
 
   return (
     <div>

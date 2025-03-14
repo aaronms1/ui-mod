@@ -1,7 +1,7 @@
 import { from, Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import client from "./connection-factory";
-import { MetricsTypes } from '../enums/metrics-types';
+import { MetricsTypes } from '../enums/metrics-types.ts';
 
 /**
  * <h1>{@link MetricsBridge}</h1>

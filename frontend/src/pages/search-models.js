@@ -2,7 +2,7 @@ import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { useEffect, useState } from "react";
 import Button from "../components/button";
 import { SearchModelsBridge } from "../bridges/search-models-bridge";
-import { DownloadActions } from "../enums/download-actions";
+import { DownloadActions } from "../enums/download-actions.js";
 import { NotificationService } from "../components/notifications";
 import Grid from "./grid";
 import { firstValueFrom } from "rxjs";

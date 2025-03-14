@@ -4,7 +4,7 @@ import Dialog from '../components/dialog';
 import { NotificationService } from '../components/notifications';
 import InputArea, { TextFieldValueChangedEvent } from '../components/input-area';
 import { ModelsBridge } from '../bridges/models-bridge';
-import { ModelActions } from '../enums/model-actions';
+import { ModelActions } from '../enums/model-actions.ts';
 import { firstValueFrom } from 'rxjs';
 
 const MergeModelView: React.FC = () => {

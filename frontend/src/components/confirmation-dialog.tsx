@@ -1,6 +1,7 @@
 import React from 'react';
 import Dialog from './dialog';
 import Button from './button';
+// import '../styles/components/dialog.scss';
 
 interface ConfirmationDialogProps {
     isOpen: boolean;

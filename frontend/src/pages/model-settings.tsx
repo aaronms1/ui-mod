@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Button from '../components/button';
 import { ModelsBridge } from '../bridges/models-bridge';
-import { ModelActions } from '../enums/model-actions';
+import { ModelActions } from '../enums/model-actions.ts';
 import { firstValueFrom } from 'rxjs';
 import { NotificationService } from '../components/notifications';
 import InputArea from '../components/input-area';

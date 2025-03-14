@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Subject } from "rxjs";
 import { scan } from "rxjs/operators";
-import "./notifications.scss";
+// import "../styles/components/notifications.scss";
 
 // Define notification types and interface
 type NotificationType = "success" | "error" | "info";
@@ -22,6 +22,12 @@ export const NotificationService = {
     },
 };
 
+/**
+ * <h1>{@link Notifications}</h1>
+ * A component that listens to notifications and displays them.
+ * Basically this is the equivalent of a system.out.println() in the frontend.
+ * @constructor
+ */
 const Notifications: React.FC = () => {
     const [notifications, setNotifications] = useState<Notification[]>([]);
 
@@ -35,7 +41,7 @@ const Notifications: React.FC = () => {
                         // Add new notification
                         const notificationWithRemoval = [...allNotifications, newNotification];
 
-                        // Schedule auto-removal after qwen2.5 seconds
+                        // Schedule auto-removal after 5 seconds
                         setTimeout(() => {
                             setNotifications((current) =>
                                 current.filter((n) => n.id !== newNotification.id)

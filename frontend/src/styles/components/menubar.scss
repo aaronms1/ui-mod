@@ -1,0 +1,35 @@
+.menu-bar {
+  display: flex;
+  background-color: var(--base-color);
+  padding: var(--space-m);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: var(--space-s);
+  cursor: pointer;
+  position: relative;
+}
+
+.menu-item img {
+  margin-right: var(--space-s);
+}
+
+.menu-item.child {
+  padding-left: var(--space-l);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--base-color);
+  padding: var(--space-s);
+  box-shadow: 0 0 10px var(--shade-50pct);
+}
+
+.menu-item:hover > .submenu {
+  display: block;
+}

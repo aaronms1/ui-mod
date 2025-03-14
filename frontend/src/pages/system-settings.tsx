@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SystemSettingsBridge } from '../bridges/system-settings-bridge';
-import { SystemSettingsOptions } from '../enums/system-settings-options';
+import { SystemSettingsOptions } from '../enums/system-settings-options.ts';
 import { from } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import Button from '../components/button';

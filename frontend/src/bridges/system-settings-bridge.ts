@@ -1,6 +1,6 @@
 import { from, Observable } from 'rxjs';
 import client from "./connection-factory";
-import { SystemSettingsOptions } from '../enums/system-settings-options';
+import { SystemSettingsOptions } from '../enums/system-settings-options.ts';
 import { map } from 'rxjs/operators';
 
 /**

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ViewConfig } from '@vaadin/hilla-file-router/types.js';
 import { NotificationService } from '../components/notifications';
 import { SnapshotsBridge } from '../bridges/snap-shots-bridge';
-import { SnapshotsActions } from '../enums/snapshots-actions';
+import { SnapshotsActions } from '../enums/snapshots-actions.ts';
 import { from } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import Button from '../components/button';

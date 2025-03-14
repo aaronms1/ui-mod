@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { RadialGauge } from '@progress/kendo-react-gauges';
 import { MetricsBridge } from '../bridges/metrics-bridge';
-import { MetricsTypes } from '../enums/metrics-types';
+import { MetricsTypes } from '../enums/metrics-types.ts';
 import { Subscription } from 'rxjs';
 
 interface DiskGaugeProps {
   value?: number;
 }
 
+/**
+ * <h1>{@link DiskGauge}
+ * @param propValue - value to display in the gauge
+ * @constructor - returns a gauge to display disk usage
+ */
 const DiskGauge: React.FC<DiskGaugeProps> = ({ value: propValue }) => {
   const [value, setValue] = useState(0);
   let subscription: Subscription;

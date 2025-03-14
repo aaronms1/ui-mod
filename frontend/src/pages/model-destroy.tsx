@@ -4,7 +4,7 @@ import Dialog from '../components/dialog';
 import { NotificationService } from '../components/notifications';
 import InputArea, { TextFieldValueChangedEvent } from '../components/input-area';
 import { ModelsBridge } from '../bridges/models-bridge';
-import { ModelActions } from '../enums/model-actions';
+import { ModelActions } from '../enums/model-actions.ts';
 import { firstValueFrom } from 'rxjs';
 
 const DestroyModelView: React.FC = () => {
@@ -48,9 +48,8 @@ const DestroyModelView: React.FC = () => {
         </Button>
       </section>
       <Dialog
-        opened={dialogOpened}
+        isOpen={dialogOpened}
         onOpenedChanged={(e) => setDialogOpened(e.target.value ?? false)}
-        isOpen={false}
         message={''}
         onClose={closeDialog}
       >

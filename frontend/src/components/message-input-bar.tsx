@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './MessageInputBar.scss';
+// import './MessageInputBar.scss';
 import InputArea from './input-area';
 import Button from './button';
 
@@ -9,6 +9,14 @@ interface MessageInputBarProps {
     className?: string; // Optional additional CSS classes
 }
 
+/**
+ * <h1>{@link MessageInputBar}</h1>
+ * The `MessageInputBar` component is a simple input bar that allows users to type a message and send it.
+ * @param onSend Callback when the send button is clicked
+ * @param placeholder Placeholder text
+ * @param className Optional additional CSS classes
+ * @constructor
+ */
 const MessageInputBar: React.FC<MessageInputBarProps> = ({ onSend, placeholder = 'Enter your message...', className }) => {
     const [message, setMessage] = useState<string>(''); // State to manage the current message
 

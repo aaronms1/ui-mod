@@ -1,4 +1,4 @@
-import { DownloadActions } from '../enums/download-actions';
+import { DownloadActions } from '../enums/download-actions.ts';
 import { from, Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import client from './connection-factory';

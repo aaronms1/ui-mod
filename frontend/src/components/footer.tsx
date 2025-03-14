@@ -1,5 +1,5 @@
 import React from 'react';
-import './FooterContainer.scss';
+// import '../styles/components/footer.css';
 import HorizontalContainer from './horizontal-container';
 
 interface FooterProps {

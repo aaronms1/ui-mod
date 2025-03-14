@@ -1,7 +1,7 @@
 import { from, Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import client from "./connection-factory";
-import { MessageActions } from "../enums/message-actions";
+import { MessageActions } from "../enums/message-actions.ts";
 
 /**
  * <h1>{@link MessageBridge}</h1>

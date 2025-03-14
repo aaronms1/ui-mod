@@ -1,7 +1,7 @@
 import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
 import { useState } from 'react';
 import { SystemSettingsBridge } from '../bridges/system-settings-bridge';
-import { SystemSettingsOptions } from '../enums/system-settings-options';
+import { SystemSettingsOptions } from '../enums/system-settings-options.js';
 import { from } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import Button from '../components/button';

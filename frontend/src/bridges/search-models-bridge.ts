@@ -1,7 +1,7 @@
 import { from, Observable } from "rxjs";
 import { map } from "rxjs/operators";
 import client from "./connection-factory";
-import { DownloadActions } from '../enums/download-actions';
+import { DownloadActions } from '../enums/download-actions.ts';
 
 /**
  * <h1>{@link SearchModelsBridge}</h1>

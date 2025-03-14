@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Button from "../components/button";
 import { SearchModelsBridge } from "../bridges/search-models-bridge";
-import { DownloadActions } from "../enums/download-actions";
+import { DownloadActions } from "../enums/download-actions.ts";
 import { NotificationService } from "../components/notifications";
 import Grid from "./grid";
 import { firstValueFrom } from "rxjs";
@@ -60,6 +60,7 @@ const SearchModelsView: React.FC<SearchModelsViewProps> = ({
         NotificationService.show(message, type);
     };
 
+    // @ts-ignore
     const handleDownload = async (modelId: string) => {
         try {
             await firstValueFrom(SearchModelsBridge(DownloadActions.DOWNLOAD_LLM_MODEL));

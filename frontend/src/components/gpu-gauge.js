@@ -2,7 +2,7 @@ import { jsx as _jsx } from "react/jsx-runtime";
 import { useEffect, useState } from 'react';
 import { RadialGauge } from '@progress/kendo-react-gauges';
 import { MetricsBridge } from '../bridges/metrics-bridge';
-import { MetricsTypes } from '../enums/metrics-types';
+import { MetricsTypes } from '../enums/metrics-types.js';
 const GpuGauge = ({ value: propValue }) => {
     const [value, setValue] = useState(0);
     let subscription;

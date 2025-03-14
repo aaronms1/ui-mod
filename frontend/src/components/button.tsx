@@ -1,5 +1,5 @@
 import React from 'react';
-import './Button.scss';
+// import '../styles/components/button.scss';
 
 interface ButtonProps {
   onClick?: () => void,
@@ -17,8 +17,8 @@ const Button: React.FC<ButtonProps> = ({
                                          children,
                                          icon,
                                          theme = 'primary',
-                                         size = 'medium',
-                                         style
+                                         size = 'medium'
+                                         // style
                                        }) => {
   return (
     <button className={`button ${theme} ${size} ${className}`}

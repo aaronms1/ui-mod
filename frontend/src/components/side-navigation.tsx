@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import './side-navigation.scss';
+// import './side-navigation.scss';
 
 interface SideNavigationProps {
   position: 'left' | 'right';
