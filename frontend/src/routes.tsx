@@ -13,11 +13,11 @@ import SearchModelsView from './pages/search-models';
 import ManageServersView from './pages/servers';
 import SnapshotsView from './pages/snapshots';
 import SystemSettingsView from './pages/system-settings';
+import MainLayout from './@main-layout';
 
 export const router = createBrowserRouter([
   {
     path: '/chat-client',
-
     element: <ChatClientView />,
   },
   {
@@ -75,5 +75,9 @@ export const router = createBrowserRouter([
   {
     path: '/system-settings',
     element: <SystemSettingsView />
+  },
+  {
+    path: '*',
+    element: <MainLayout />,
   }
 ]);
